@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana;      
+}
+
+h1.index{    
+    font-size: 20px;  
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: #fff;    
+    background-image: url("../imagens/pexels-lisa-1545510.jpg");    
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+h2{    
+    color: #000;
+    padding: 20px;
+}
+
+p{   
+    font-size: 14px;
+    color: #000;
+    padding: 0 20px 0 20px;
+}
+
+.conteudo{
+    min-height: 90vh;
+}
+
+.nav{
+    width: 100%;
+    background-color: rgb(27, 26, 26); 
+    box-shadow: inset 0 0 2em rgb(51, 51, 51);
+    height: 70px;
+    position: fixed;  
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
+    align-items: center;   
+    height: 100%;
+}
+
+.nav img{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;    
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.menu ul{   
+    display: flex;  
+}
+
+li{
+    color: #fff;    
+    text-decoration: none; 
+    list-style-type: none;
+    padding: 0 10px 0 10px;    
+}
+
+.menu ul li a{
+    border: none; 
+    padding: 5px;
+    color: #fff;  
+    font-size: 15px;
+    text-decoration: none; 
+    text-transform: uppercase;
+    text-transform: 300ms easy;    
+    opacity: 0.5;   
+}
+
+.menu ul li a:hover{
+    cursor: pointer;
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-color: gold;
+}
+
+.emoji{
+    padding: 80px;
+    text-align: center;
+}
+
+.emoji p{
+    font-size: 20px;
+}
+.video{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    background-color: #eee;
+}g
+
+.youtube{    
+    align-items:center;    
+}
+
+.youtube h2{
+    padding: 0 0 20px 10px;
+}
+.youtube p{
+    padding: 0 0 20px 10px;
+    
+}
+
+.botao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.botao p{
+    padding: 15px;
+    font-size: 20px
+}
+
+.botao img{    
+    width: 180px; 
+    height: 50px; 
+    border-radius: 10px; 
+    opacity: 0.5; 
+    text-transform: 300ms easy;  
+}
+
+.botao img:hover{
+    opacity: 1;
+}
+
+.textos{
+    display: flex;
+    background-color: #eee;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-intro{
+    display: flex;
+    padding: 20px;
+}
+
+.img-intro img{
+    width: 200px;
+    border-radius:50%;
+}
+
+h3{
+    padding: 20px;
+}
+.depoimento{
+    padding: 20px;
+}
+.imagens{
+    padding: 100px 0 0 20px;
+    display: inline;
+    justify-content: center;    
+}
+
+.imagens h2{
+    margin-top: 50px;
+}
+
+.imagens .fotos{  
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;     
+}
+
+.imagens .fotos img{
+    padding: 15px;  
+    width: 400px; 
+    height: 300px; 
+    border-radius: 30px;  
+}
+
+footer{
+    margin-top: 20px;
+    padding: 10px 0 10px 0;
+    background-color: #333;
+    text-align: center;
+}
+
+footer p{ 
+    font-size: 10px;   
+    color: #eee;  
+    padding: 0 10px 5px 10px;   
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+}
+
+.redes img{
+    width: 40px;
+    margin: 0 20px 0 20px;
+    opacity: 0.5;
+    text-transform: 300ms easy;  
+}
+
+.redes img:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
