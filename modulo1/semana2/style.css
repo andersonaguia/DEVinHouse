@@ -207,12 +207,36 @@ li.data{
     min-height: 100vh;
 }
 
+.formulario{
+    width: 100%;
+    background-color: #eee;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-campos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.contato{
+    width: 30%;
+}
+
+.redes  img{
+    width: 40px;
+    height: 40px;
+}
+
 footer{
     background-color: #333;
     color: #fff;
     font-size: 15px;
     text-align: center;
 }
+
+/*mobile*/
 
 @media (max-width: 820px){
     header{        
@@ -311,14 +335,10 @@ footer{
         width: 100%;
     }
 
+    
     footer{
         white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-    }
-
-    
-    
-   
-    
+    }   
 }
