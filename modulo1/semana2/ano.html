@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcula Ano</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;           
+            width:400px;
+            height: 400px;
+            background-image: linear-gradient(45deg, rgb(38, 162, 34), rgb(84, 184, 48), #000)
+        }
+        .botoes{
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .resultado{
+            display: flex;
+            justify-content: center;
+            background-color: rgba(17, 13, 13, 0.384);
+        }
+        button{
+            background-color: rgba(33, 31, 31, 0.436);
+            font-size: 40px;
+            width: 100px;
+            height: 80px;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 100px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <div class="botoes">
+                <button id="decremento" value="-1">-</button>
+                <button id="incremento" value="1">+</button>
+            </div>
+            <div class="resultado">
+                <p id="valor">0</p>  
+            </div>            
+        </div>
+        
+    </main>      
     <script src="./ano.js"></script>
 </body>
 </html>
