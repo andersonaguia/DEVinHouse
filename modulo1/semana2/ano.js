@@ -1,11 +1,11 @@
 //Calculo de diferença do ano digitado
-/*const ano = prompt("Digite um ano:");
+const ano = prompt("Digite um ano:");
 const atual = new Date().getFullYear();
 
 diferenca = atual - parseInt(ano);
 
 alert("Diferença: " + diferenca + " anos.")
-*/
+
 //Incremento e decremento de valores
 let resultado = 0;
 let valor = document.getElementById("valor");
