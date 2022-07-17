@@ -35,3 +35,14 @@ let objeto6 = {
     idade: 29    
 }    
 
+let listaDeConvidados = [
+    objeto1, 
+    objeto2, 
+    objeto3, 
+    objeto4, 
+    objeto5, 
+    objeto6
+];
+
+console.table(listaDeConvidados);
+
