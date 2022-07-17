@@ -58,10 +58,36 @@ function liberaBebidas(array){
     return novaLista;    
 }
 
-//console.log("LISTA ORIGINAL");
-//console.table(listaDeConvidados);
+console.log("LISTA ORIGINAL");
+console.table(listaDeConvidados);
 
-//console.log("NOVA LISTA");
-liberaBebidas(listaDeConvidados);
+console.log("LISTA CONVIDADOS COM BEBIDAS");
+let convidadosComBebidas = liberaBebidas(listaDeConvidados);
+console.table(convidadosComBebidas);
 
+function separarCamarote(lista){
+    let camaroteFiltrado = lista.filter((listaDeConvidados) => listaDeConvidados.setor === "camarote");
+    return camaroteFiltrado;
+} 
 
+console.log("CONVIDADOS CAMAROTE");
+let listaCamarote = separarCamarote(convidadosComBebidas);
+console.table(listaCamarote);
+
+function separarPista(lista){
+    let pistaFiltrado = lista.filter((listaDeConvidados) => listaDeConvidados.setor === "pista");
+    return pistaFiltrado;
+}
+
+console.log("CONVIDADOS PISTA");
+let listaPista = separarPista(convidadosComBebidas);
+console.table(listaPista);
+
+function separarArquibancada(lista){
+    let arquibancadaFiltrado = lista.filter((listaDeConvidados) => listaDeConvidados.setor === "arquibancada");
+    return arquibancadaFiltrado;
+}
+
+console.log("CONVIDADOS ARQUIBANCADA");
+let listaArquibancada = separarArquibancada(convidadosComBebidas);
+console.table(listaArquibancada);
