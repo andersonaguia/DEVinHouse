@@ -11,7 +11,7 @@ var listaConvidados = [
     { nome: "Pedro", sobrenome: "Lobo" },
     ];
     
-    listaConvidados.forEach(function(valor, i){  
+    listaConvidados.forEach(function(valor, i, convidados){  
         item = document.createElement("li"); //Cria um elemento <li> no documento HTML
         nome = listaConvidados[i].nome + " " + listaConvidados[i].sobrenome; //Guarda os valores contidos no índice [i] do array, dentro das chaves '.nome' e '.sobrenome' do objeto contido nesse índice dentro de uma variável chamada 'nome'
         item.textContent = nome; //Adiciona ao item o conteúdo contido na variável 'nome'
