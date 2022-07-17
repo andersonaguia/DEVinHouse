@@ -1,7 +1,37 @@
-let listaNumeros = [ 2, 3, 9, 12, 16, 55, 90, 78, 17 ];
+let objeto1 = {
+    nome: "Anderson",
+    sobrenome: "Aguiar",
+    setor: "camarote",
+    idade: 34
+}
+let objeto2 = {
+    nome: "André",
+    sobrenome: "Mendes",
+    setor: "arquibancada",
+    idade: 18
+}
+let objeto3 = {
+    nome: "Gilberto",
+    sobrenome: "Junior",
+    setor: "arquibancada",
+    idade: 17
+}
+let objeto4 = {
+    nome: "Andreza",
+    sobrenome: "Sanny",
+    setor: "pista",
+    idade: 17
+}
+let objeto5 = {    
+    nome: "Patrícia",
+    sobrenome: "Rocha",
+    setor: "camarote",
+    idade: 34
+}
+let objeto6 = {
+    nome: "José",
+    sobrenome: "Augusto",
+    setor: "pista",
+    idade: 29    
+}    
 
-listaNumeros.forEach(function(valor,i){
-    listaNumeros[i] = valor*2;
-});
-
-console.log(listaNumeros);
