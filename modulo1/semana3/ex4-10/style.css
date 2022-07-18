@@ -5,41 +5,89 @@
 }
 
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Arial';
+    font-style: normal;
+    background: #F5F5F5;
 }
 
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(38, 38, 118);
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;    
+    color: #FFFFFF;
+    text-transform: uppercase;   
+    position: absolute;
+    width: 1440px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #5B6E8A;
+    padding: 11px 0 14px 0;
+}
+h1{
+    margin: 11px 0 14px 0
+}
+
+h2{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin: 10px;
+}
+
+li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;    
+}
+
+ul{
+    margin-left: 40px;
 }
 
 main{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin:30px 0 30px 0;
-}
-
-ul{
-    margin: 20px;
+    color: #000000;
 }
 
 .camarote{
-    border: 1px solid;
-    width: 300px;
-    height: 400px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 338px;
+    height: 600px;
+    left: 193px;
+    top: 109px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .arquibancada{    
-    border: 1px solid;
-    width: 300px;
-    height: 400px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 338px;
+    height: 600px;
+    left: 587px;
+    top: 109px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .pista{
-    border: 1px solid;
-    width: 300px;
-    height: 400px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 338px;
+    height: 600px;
+    left: 981px;
+    top: 109px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
