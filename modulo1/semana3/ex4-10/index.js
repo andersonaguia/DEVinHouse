@@ -97,6 +97,9 @@ let arquibancada = document.getElementById("arquibancada");
 listaArquibancada.forEach((vlr, i, array) =>{
     let novoItem = document.createElement("li");
     let valorItem = array[i].nome + " " + array[i].sobrenome;
+    if(array[i].openBar === true){
+        valorItem += " 🍹";
+    }
     novoItem.textContent = valorItem;
     arquibancada.appendChild(novoItem);
 });
@@ -106,6 +109,9 @@ let camarote = document.getElementById("camarote");
 listaCamarote.forEach((vlr, i, array) =>{
     let novoItem = document.createElement("li");
     let valorItem = array[i].nome + " " + array[i].sobrenome;
+    if(array[i].openBar === true){
+        valorItem += " 🍹";
+    }
     novoItem.textContent = valorItem;
     camarote.appendChild(novoItem);
 });
@@ -115,6 +121,9 @@ let pista = document.getElementById("pista");
 listaPista.forEach((vlr, i, array) =>{
     let novoItem = document.createElement("li");
     let valorItem = array[i].nome + " " + array[i].sobrenome;
+    if(array[i].openBar === true){
+        valorItem += " 🍹";
+    }
     novoItem.textContent = valorItem;
     pista.appendChild(novoItem);
 });
