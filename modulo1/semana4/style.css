@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana;
+}
+
+h1{
+    font-size: 3em;
+    color: #403d39;
+}
+
+h2{
+    font-size: 1.2em;
+    padding: 8px;
+    color: #eff6e0;
+}
+
+h3{
+    color: #eff6e0;
+    font-size: 0.8em;
+    padding: 5px 0 5px 10px;
+}
+li{
+    display: flex;
+    justify-content: start;
+    align-items: center;    
+    list-style-type: none;
+}
+.conteudo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar-container{   
+    display: flex;
+    flex-direction: column;
+    justify-content: top;    
+    width: 20%;  
+    height: 100vh; 
+    background-color: #004e89;  
+    position: fixed;  
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px;  
+    border-bottom: 2px solid;
+    border-color: #fdfffc; 
+    background-color: #fffcf2;
+}
+.logo img{
+    width: 200px;   
+}
+
+.navbar-items {
+    display: flex;    
+    border-bottom: 2px solid;
+    border-color: #fdfffc; 
+}
+
+.pesquisa{
+    display: flex;
+    flex-direction: column;    
+    color: #eff6e0;
+    padding: 10px;
+    gap: 10px
+   
+}
+
+.pesquisa input{
+    padding: 10px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.pesquisa button{
+    width: 50px;
+    height: 50px; 
+    border: none;   
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+.pesquisa button:hover{
+    cursor: pointer;
+}
+
+.busca{
+    display: flex;
+
+}
+main{
+    padding: 40px 0 0 25px;
+    width: 100%;    
+}
+
+main h2{
+    color: #403d39;
+}
+
+.saber-mais{
+    border: 1px solid;
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    opacity: 1;
+    transition: 50ms ease;
+}
+
+.saber-mais:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.info-login{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    background-color: #f8f9fac1;
+    padding: 10px;
+    border-radius: 10px;    
+}
+
+.login input{
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+.login h2{
+    color: #403d39;
+    padding: 0;
+}
+
+.esquece{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-login{
+    display: flex;
+    justify-content: space-between;  
+    align-items: flex-start; 
+}
+
+.btn-login button{
+    text-transform: uppercase;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background-color: #3c096c;
+    padding: 5px;
+}
+
+.btn-login button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.geral{
+    width: 80%;
+    height: 100vh;
+    background-image: url(./imagens/pexels-andrea-piacquadio-3755514.jpg);
+    background-repeat: no-repeat;    
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.taxas{
+    padding: 20px;
+    background-color: #000000d1;
+}
+
+.titulos{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 4px solid;
+    border-color: #48454579;
+    padding: 0 0 10px 0;
+    
+}
+.titulos h2{
+    padding: 0;
+    color: #fff;    
+}
+
+.mercado a{
+    color: #fff;
+}
+
+.percentuais{
+    display: flex;
+    justify-content: space-between;
+}
+
+.percentuais h2{
+    padding: 10px 0 0 0;
+}
