@@ -55,7 +55,7 @@ function buscaCliente(id){
 
 function realizaSaque(valor, id){    
     buscaCliente(id);    
-    if((valor === 0 || isNaN(valor))){
+    if((valor <= 0 || isNaN(valor))){
          alert("Valor Inválido");
     }else if(valor > contasClientes[posCliente].saldo){
          alert("Saldo Insuficiente.\nSaldo Atual R$ " + contasClientes[posCliente].saldo);
@@ -66,17 +66,19 @@ function realizaSaque(valor, id){
 }
 
 function realizaDeposito(valor, id){
-    if((valor === 0 || isNaN(valor))){
-        alert("Valor Inválido");
+    buscaCliente(id);    
+    if((valor <= 0 || isNaN(valor))){
+         alert("Valor Inválido");
     }else{
-        alert(valor);
+        contasClientes[posCliente].saldo = contasClientes[posCliente].saldo + valor;
+         alert("Depósito realizado com sucesso!\nSaldo Atual R$ " + contasClientes[posCliente].saldo);    
     }
 }
 
-function verificaOperacao(valor, id, operacao){
-    if(operacao === "saque"){       
+function verificaOperacao(valor, id, tipoOperacao){
+    if(tipoOperacao === "saque"){       
         realizaSaque(valor, id);
-    }else{
+    }else if(tipoOperacao === "deposito"){
         realizaDeposito(valor, id);        
     }
 }
