@@ -17,75 +17,61 @@ const contasClientes = [
 ];
 
 const conta = document.getElementById("conta");
-conta.addEventListener('change', ()=>{
-    contaSelecionada = parseInt(conta.value);
-});
+const operacao = document.getElementById("operacao");
+const valor = document.getElementById("valor");
 
 function exibeContas(){
+    let elemento; 
     contasClientes.forEach((cliente) => {    
-        let elemento = document.createElement("option");    
+        elemento = document.createElement("option");        
         elemento.innerText = cliente.id;
         conta.appendChild(elemento);
-    });
-    contaSelecionada = parseInt(conta.value);
+    });    
 };
 
-const operacao = document.getElementById("operacao");
-let tipoOperacao = operacao.value;
-operacao.addEventListener('change', ()=>{
-    tipoOperacao = operacao.value;
-});
+function realizaSaque(valor, i){    
+    if(valor > contasClientes[i].saldo){
+        alert("Saldo Insuficiente.\nSaldo Atual R$ " + contasClientes[i].saldo);         
+    }else{
+        contasClientes[i].saldo = contasClientes[i].saldo - valor;
+        alert("Saque realizado com sucesso!\nSaldo Atual R$ " + contasClientes[i].saldo);    
+    }
+}
 
-const valor = document.getElementById("valor");
-let valorOperacao = parseFloat(valor.value);
-valor.addEventListener('change', ()=>{
-    valorOperacao = parseFloat(valor.value);
-});
+function realizaDeposito(valor, i){    
+    contasClientes[i].saldo = contasClientes[i].saldo + valor;
+    alert("Depósito realizado com sucesso!\nSaldo Atual R$ " + contasClientes[i].saldo);    
+}
 
-let posCliente;
+function verificaOperacao(valor, indiceCliente, operacao){   
+    if(operacao === "saque"){      
+        realizaSaque(valor, indiceCliente);
+    }else if(operacao === "deposito"){
+        realizaDeposito(valor, indiceCliente);        
+    }
+}
 
-function buscaCliente(id){
+function consultaCliente(valor, id, op){
+    let indiceCliente;
     contasClientes.forEach((vl, i)=>{
-        if(vl.id === id){
-            posCliente = i;
+        if(vl.id === id){                 
+            indiceCliente = i;            
         }
     });
-}
-
-
-function realizaSaque(valor, id){    
-    buscaCliente(id);    
-    if((valor <= 0 || isNaN(valor))){
-         alert("Valor Inválido");
-    }else if(valor > contasClientes[posCliente].saldo){
-         alert("Saldo Insuficiente.\nSaldo Atual R$ " + contasClientes[posCliente].saldo);
+    if(indiceCliente || indiceCliente === 0){
+        if(valor > 0 && op){
+            verificaOperacao(valor, indiceCliente, op);
+        }else{
+            alert("Valor incorreto ou operação inválida.");
+        }
     }else{
-        contasClientes[posCliente].saldo = contasClientes[posCliente].saldo - valor;
-         alert("Saque realizado com sucesso!\nSaldo Atual R$ " + contasClientes[posCliente].saldo);    
-    }
-}
-
-function realizaDeposito(valor, id){
-    buscaCliente(id);    
-    if((valor <= 0 || isNaN(valor))){
-         alert("Valor Inválido");
-    }else{
-        contasClientes[posCliente].saldo = contasClientes[posCliente].saldo + valor;
-         alert("Depósito realizado com sucesso!\nSaldo Atual R$ " + contasClientes[posCliente].saldo);    
-    }
-}
-
-function verificaOperacao(valor, id, tipoOperacao){
-    if(tipoOperacao === "saque"){       
-        realizaSaque(valor, id);
-    }else if(tipoOperacao === "deposito"){
-        realizaDeposito(valor, id);        
-    }
+        alert("Cliente não encontrado!")
+    } 
 }
 
 const btnConfirmar = document.getElementById("confirmar");
 btnConfirmar.addEventListener("click", ()=>{    
-    verificaOperacao(valorOperacao, contaSelecionada, tipoOperacao);    
+    consultaCliente(parseFloat(valor.value), parseInt(conta.value), operacao.value);    
 });
 
 
