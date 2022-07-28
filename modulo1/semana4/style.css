@@ -136,52 +136,51 @@ main h2{
     display: flex;
     justify-content: space-between;
     width: 250px;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     margin-right: 30px;
     background-color: #f8f9fac1;
     padding: 10px;
-    border-radius: 10px;    
+    border-radius: 10px;        
 }
 
-.login input{
+.login input, select{
     height: 50px;
     border-radius: 5px;
     border: none;
     background-color: #f8f9fa;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1em;
 }
+
+.login input, select:hover{
+    cursor: pointer;
+}
+
 .login h2{
     color: #403d39;
     padding: 0;
 }
 
-.esquece{
+.botao{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: flex-end;
 }
-
-.btn-login{
-    display: flex;
-    justify-content: space-between;  
-    align-items: flex-start; 
-}
-
-.btn-login button{
+#confirmar{
     text-transform: uppercase;
-    width: 80px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     color: #fff;
     font-weight: bold;
     border: none;
     border-radius: 30px;
     background-color: #3c096c;
     padding: 5px;
+    font-size: 1em;
 }
 
-.btn-login button:hover{
+#confirmar:hover{
     opacity: 0.9;
     cursor: pointer;
 }
