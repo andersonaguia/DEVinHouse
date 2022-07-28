@@ -56,13 +56,18 @@
                     </div>
                     <div class="login">                        
                             <h2>Clientes</h2> 
-                            <select name="" id="conta"></select> 
-                            <input type="text" placeholder="Valor" id="valor">
-                            <select name="operacao" id="operacao">
+                            <label for="conta">Conta</label>
+                            <select name="" id="conta" required></select>                             
+                            <label for="operacao">Operação</label>
+                            <select name="operacao" id="operacao" required>
                                 <option value="saque">Saque</option>
                                 <option value="deposito">Deposito</option>
                             </select>
-                            <button id="confirmar">Confirmar</button>                                            
+                            <input type="text" placeholder="Valor" id="valor" required>
+                            <input type="password" id="senha" placeholder="Password" required>
+                            <div class="botao">
+                                <button id="confirmar">Confirmar</button>
+                            </div>                                    
                     </div>
                 </div>                
             </main>   
