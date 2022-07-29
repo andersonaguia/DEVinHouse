@@ -6,3 +6,13 @@ export class Produto{
         this.quantidade = qtd;
     }
 }
+
+export class Pedido{
+    constructor(num, cliente){
+        this.numeroPedido = num;
+        this.dataPedido = new Date().toLocaleDateString();
+        this.estaPago = false;
+        this.listaProdutos = [];
+        this.nomeCliente = cliente;
+    }
+}
