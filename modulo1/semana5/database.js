@@ -7,7 +7,7 @@ export class Produto{
     }
 }
 
-export class Pedido{
+export class Pedido{    
     constructor(num, cliente){
         this.numeroPedido = num;
         this.dataPedido = new Date().toLocaleDateString();
@@ -15,4 +15,11 @@ export class Pedido{
         this.listaProdutos = [];
         this.nomeCliente = cliente;
     }
+
+    set adicionarProduto(produto){
+        if(produto instanceof Object){
+            this.listaProdutos.push(produto);
+        }
+    }
 }
+
